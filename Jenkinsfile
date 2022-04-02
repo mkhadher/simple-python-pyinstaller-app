@@ -47,7 +47,7 @@ pipeline {
       }
             post {
         success {
-          archiveArtifacts "${env.BUILD_ID}/sources/dist/MyApp"
+          archiveArtifacts "${env.BUILD_ID}/sources/dist/MyApp.exe"
           sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
         }
 
